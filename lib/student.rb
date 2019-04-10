@@ -41,4 +41,44 @@ class Student
   end
   
   
+   #save
+    saves an instance of the Student class to the database (FAILED - 1)
+  .create
+    takes in a hash of attributes and uses metaprogramming to create a new student object. Then it uses the #save method to save that student to the database (FAILED - 2)
+    returns the new object that it instantiated (FAILED - 3)
+
+Failures:
+
+  1) Student #save saves an instance of the Student class to the database
+     Failure/Error: expect(josh.id).to eq(1)
+
+       expected: 1
+            got: nil
+
+       (compared using ==)
+     # ./spec/student_spec.rb:51:in `block (3 levels) in <top (required)>'
+
+  2) Student .create takes in a hash of attributes and uses metaprogramming to create a new student object. Then it uses the #save method to save that student to the database
+     Failure/Error:
+       def self.create
+
+       end
+
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     # ./lib/student.rb:39:in `create'
+     # ./spec/student_spec.rb:61:in `block (3 levels) in <top (required)>'
+
+  3) Student .create returns the new object that it instantiated
+     Failure/Error:
+       def self.create
+
+       end
+
+     ArgumentError:
+       wrong number of arguments (given 1, expected 0)
+     # ./lib/student.rb:39:in `create'
+     # ./spec/student_spec.rb:65:in `block (3 levels) in <top (required)>'
+
+  
 end
